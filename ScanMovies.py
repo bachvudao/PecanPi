@@ -7,7 +7,10 @@ import re
 spaceReplaceList = ["\."]
 removeList = ["720p", "1080p", "\(.*\)", "\[.*\]", "DVDRip.*", "20.*", "x264.*", "BluRay.*", "-FXG", "\(", "\)", "\[", "\]", "LiMiTED.*", "HDRip.*"]
 
-for movieDir in os.listdir(sys.argv[1]):
+os.chdir(sys.argv[1])
+print "Current Dir: " + os.getcwd()
+
+for movieDir in os.listdir(os.getcwd()):
     if (movieDir == "."):
         continue
 
